@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		echo 'Time now is: ' `time`
+		sh "echo 'Time now is: ' `time`"
             }
         }
         stage('Test') {
