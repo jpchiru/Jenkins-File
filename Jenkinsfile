@@ -1,11 +1,14 @@
 pipeline {
-    agent any
+    //agent any
+	agent {
+        	docker { image '16.04' }
+    	}
 
     stages {
         stage('Build') {
             steps {
                 echo 'Building..'
-		sh "echo 'Time now is: ' `time`"
+		sh 'echo $env'
             }
         }
         stage('Test') {
