@@ -8,7 +8,6 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-		sh 'echo $env'
             }
         }
         stage('Test') {
